@@ -7,35 +7,37 @@
     <title>Calculator</title>
 </head>
 <body>
-    <table>
-        <tr>
-            <td colspan="3"><input type="text" disabled></td>
-            <td><input type="button" value="C"></td>
-        </tr>
-        <tr>
-            <td><input type="button" value="7"></td>
-            <td><input type="button" value="8"></td>
-            <td><input type="button" value="9"></td>
-            <td><input type="button" value="/"></td>
-        </tr>
-        <tr>
-            <td><input type="button" value="4"></td>
-            <td><input type="button" value="5"></td>
-            <td><input type="button" value="6"></td>
-            <td><input type="button" value="-"></td>
-        </tr>
-        <tr>
-            <td><input type="button" value="1"></td>
-            <td><input type="button" value="2"></td>
-            <td><input type="button" value="3"></td>
-            <td><input type="button" value="+"></td>
-        </tr>
-        <tr>
-            <td><input type="button" value="."></td>
-            <td><input type="button" value="0"></td>
-            <td><input type="button" value="="></td>
-            <td><input type="button" value="*"></td>
-        </tr>
-    </table>
+    <div class="container">
+       
+        <div>
+            <input type="text" id="screen" class="display">
+            <input type="text" id="result" class="display">
+        </div>
+        <div class="row-1 btn-row">
+            <input type="button" value="7">
+            <input type="button" value="8">
+            <input type="button" value="9">
+            <input type="button" value="/">
+        </div>
+        <div class="row-2 btn-row">
+            <input type="button" value="4">
+            <input type="button" value="5">
+            <input type="button" value="6">
+            <input type="button" value="-">
+        </div>
+        <div class="row-3 btn-row">
+            <input type="button" value="1">
+            <input type="button" value="2">
+            <input type="button" value="3">
+            <input type="button" value="+">
+        </div>
+        <div class="row-4 btn-row">
+            <input type="button" value=".">
+            <input type="button" value="0">
+            <input type="button" value="=">
+            <input type="button" value="*">
+        </div>
+
+</div>
 </body>
 </html>
