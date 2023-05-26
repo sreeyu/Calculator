@@ -10,5 +10,12 @@ class Calculator {
     constructor(previousInput, currentInput){
         this.previousInput = previousInput;
         this.currentInput = currentInput;
+        this.clear()
+    }
+
+    clear(){
+        this.prevInput = '';
+        this.currInput = '';
+        this.operation = undefined;
     }
 }
