@@ -11,32 +11,36 @@
     <div class="container" >
        
         <div>
-            <input type="text" dir="rtl" id="screen" class="display" disabled>
-            <input type="text" id="result" class="display" disabled>
+            <input data-prev-input type="text"  id="screen" class="display" disabled>
+            <input data-current-input type="text" id="result" class="display" disabled>
         </div>
-        <div class="row-1 btn-row">
-            <input type="button" value="7">
-            <input type="button" value="8">
-            <input type="button" value="9">
-            <input type="button" value="/">
+        <div class="clear-btn btn-row">
+            <input data-delete type="button" value="DEL">
+            <input data-all-clear type="button" value="AC">
         </div>
-        <div class="row-2 btn-row">
-            <input type="button" value="4">
-            <input type="button" value="5">
-            <input type="button" value="6">
-            <input type="button" value="-">
+        <div class="btn-row">
+            <input data-number type="button" value="7">
+            <input data-number type="button" value="8">
+            <input data-number type="button" value="9">
+            <input data-operation type="button" value="/">
         </div>
-        <div class="row-3 btn-row">
-            <input type="button" value="1">
-            <input type="button" value="2">
-            <input type="button" value="3">
-            <input type="button" value="+">
+        <div class="btn-row">
+            <input data-number type="button" value="4">
+            <input data-number type="button" value="5">
+            <input data-number type="button" value="6">
+            <input data-operation type="button" value="-">
         </div>
-        <div class="row-4 btn-row">
-            <input type="button" value=".">
-            <input type="button" value="0">
-            <input type="button" value="=">
-            <input type="button" value="*">
+        <div class="btn-row">
+            <input data-number type="button" value="1">
+            <input data-number type="button" value="2">
+            <input data-number type="button" value="3">
+            <input data-operation type="button" value="+">
+        </div>
+        <div class="btn-row">
+            <input data-number type="button" value=".">
+            <input data-number type="button" value="0">
+            <input data-evaluate type="button" value="=">
+            <input data-operation type="button" value="*">
         </div>
 
 </div>
