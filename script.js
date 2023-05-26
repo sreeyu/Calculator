@@ -18,4 +18,22 @@ class Calculator {
         this.currInput = '';
         this.operation = undefined;
     }
+
+    appendNumber(num){
+        if(num === '.' && this.currInput.includes('.')) return ;
+        this.currInput = this.currInput.toString() + num.toString();
+    }
+
+    updateDisplay() {
+        this.currentInput.value = this.currInput;
+    }
 }
+
+const calculator = new Calculator(previousInput, currentInput);
+
+number.forEach(num => {
+    num.addEventListener('click', event => {
+        calculator.appendNumber(event.target.value);
+        calculator.updateDisplay();
+    })
+})
