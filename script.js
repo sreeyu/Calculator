@@ -67,7 +67,11 @@ class Calculator {
 
     updateDisplay() {
         this.currentInput.value = this.currInput;
-        this.previousInput.value = this.prevInput;
+        if(this.operation != null){
+            this.previousInput.value = `${this.prevInput} ${this.operation}`;
+        } else{
+            this.previousInput.value = this.prevInput;
+        }
     }
 
     
