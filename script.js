@@ -26,9 +26,39 @@ class Calculator {
 
     selectOperations(operation){
         if(this.currInput === '') return
+        if(this.prevInput !== ''){
+            this.solve();
+        }
         this.operation = operation;
         this.prevInput = this.currInput;
         this.currInput = '';
+    }
+
+    solve(){
+        let ans;
+        const prev = parseFloat(this.prevInput);
+        const curr = parseFloat(this.currInput);
+        if(isNaN(prev) || isNaN(curr)) return
+        switch(this.operation){
+            case '+':
+                ans = prev + curr;
+                break;
+            
+            case '-':
+                ans = prev - curr;
+                break;
+
+            case '*':
+                    ans = prev * curr;
+                    break;
+                
+            case '/':
+                    ans = prev / curr;
+                    break;
+        }
+        this.currInput = ans;
+        this.prevInput = '';
+        this.operation = undefined;
     }
 
     updateDisplay() {
@@ -53,4 +83,9 @@ operation.forEach(opp => {
         calculator.selectOperations(event.target.value);
         calculator.updateDisplay();
     })
+})
+
+evaluate.addEventListener('click', () => {
+    calculator.solve();
+    calculator.updateDisplay();
 })
