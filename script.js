@@ -19,6 +19,10 @@ class Calculator {
         this.operation = undefined;
     }
 
+    delete(){
+        this.currInput = this.currInput.slice(0, -1);
+    }
+
     appendNumber(num){
         if(num === '.' && this.currInput.includes('.')) return ;
         this.currInput = this.currInput.toString() + num.toString();
@@ -87,5 +91,15 @@ operation.forEach(opp => {
 
 evaluate.addEventListener('click', () => {
     calculator.solve();
+    calculator.updateDisplay();
+})
+
+allClear.addEventListener('click', () => {
+    calculator.clear();
+    calculator.updateDisplay();
+})
+
+del.addEventListener('click', () => {
+    calculator.delete();
     calculator.updateDisplay();
 })
